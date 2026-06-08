@@ -1,0 +1,3 @@
+-- create blog
+-- home ateast 3 section
+-- create (contact, about, service, blog)
