@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background-color: #ccc; */
+  background-image:
+    radial-gradient(rgba(255, 0, 0, 0.3), rgba(255, 166, 0, 0.3)),
+    url("https://images.template.net/551106/Gradient-Background-edit-online.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#parent {
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+.container {
+  border: 1px solid green;
+}
+.left_con,
+.right_con {
+  border: 1px solid green;
+  padding: 10px;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-left: 5px;
+}
+.heading {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  
+  background-color: aqua;
+}
