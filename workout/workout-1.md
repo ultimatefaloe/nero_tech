@@ -1,0 +1,4 @@
+-- create new page and use external styling
+-- use box model
+-- create a nav bar in index.html that link all the pages created together
+-- style all previous pages base on the css properties that we have covered
