@@ -4,11 +4,22 @@
   box-sizing: border-box;
 }
 
-nav{
+:root {
+  --primary-color: #012842;
+  --secondary-color: #023f1c;
+  --background-color: #aa0707;
+  --text-color: #fff;
+  --border-radius: 4px;
+  --font-family: 'Arial', sans-serif;
+}
+
+.navigation{
   position: sticky;
   width: 100%;
-  background-color: #ddd;
+  background-color: var(--primary-color);
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 ul li {
@@ -21,7 +32,7 @@ ul li a {
   display: block;
   padding: 5px 10px;
   text-decoration: none;
-  color: #000;
+  color: var(--text-color);
 }
 
 ul li a::before,
@@ -36,16 +47,68 @@ ul li a::after {
 ul li a::before {
   top: 0;
   left: 0;
-  background-color: green;
+  background-color: var(--secondary-color);
 }
 
 ul li a::after {
   bottom: 0;
   right: 0;
-  background-color: red;
+  background-color: var(--background-color);
 }
 
 ul li a:hover::before,
 ul li a:hover::after {
   width: 100%;
+}
+
+.btn{
+  border-radius: var(--border-radius);
+  border: 1px solid var(--secondary-color);
+  padding: 5px 10px;
+  background-color: transparent;
+}
+
+.btn-primary{
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover{
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.btn-secondary{
+  background-color: var(--secondary-color);
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover{
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navigation {
+    padding: 5px;
+  }
+
+  ul li a {
+    padding: 5px;
+    font-size: 14px;
+  }
 }
